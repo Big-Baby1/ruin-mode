@@ -1,7 +1,6 @@
 global.c._Cef = class _Cef {
     constructor() {
-        //global.cef = mp.browsers.new('package://cef/index.html');
-        global.cef = mp.browsers.new('http://localhost:8080');
+        global.cef = mp.browsers.new('package://cef/index.html');
     }
 
     show(name, toggle) {

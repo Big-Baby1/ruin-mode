@@ -43,7 +43,7 @@ class Auth {
                 }
             }
 
-            let qData = await new User({
+            let qData = ({
                 username: username,
                 email: email,
                 password: password,

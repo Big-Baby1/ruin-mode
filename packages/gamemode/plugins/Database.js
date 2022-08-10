@@ -1,9 +1,16 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const config = require('../configs/DB.js')
 
 class MongoDB {
     connect(cb) {
-        mongoose.connect(config.link, {useNewUrlParser: true, useUnifiedTopology: true}).catch(e => console.log(e));
+        mongoose.connect(
+            process.env.DB_URI, {
+            useNewUrlParser: true, 
+            useUnifiedTopology: true
+        })
+        .catch(e => console.log(e));
+
         this.handle = mongoose.connection;
         this.generateModels();
 

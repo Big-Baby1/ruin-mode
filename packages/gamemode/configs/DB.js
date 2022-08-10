@@ -1,5 +1,4 @@
 module.exports = {
-    link: 'mongodb://localhost:27017/server', // MongoDB link
     schemas: {
         "accounts": {
             username: String,
